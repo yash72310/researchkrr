@@ -74,10 +74,10 @@ async function sendVerifyEmail(name,email,user_id){
             },
         });
         await transporter.sendMail({
-            from:'Helping Senior Citizen Platform',
+            from:'ResearchKrr',
             to:email,
             subject:'Verify Email to confirm your identity',
-            html:`Hiii `+name+ `!! Hope you are well<p>Please click <a href="https://senior-production.up.railway.app/verify?id=`+ user_id +`">here</a> to verify your email`
+            html:`Hiii `+name+ `!! Hope you are well<p>Please click <a href="https://researchkrr-production.up.railway.app/verify?id=`+ user_id +`">here</a> to verify your email`
         })
         console.log("Email Sent Successfully")
     }catch{

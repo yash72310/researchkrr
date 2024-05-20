@@ -5,7 +5,7 @@ const passport = require('passport')
 function emailController(){
     return{
         async  postregister(req,res){
-            const { name, email, role , password }   = req.body
+            const { name, email, password }   = req.body
          // Validate request 
          if(!name || !email || !password) {
              req.flash('error', 'All fields are required')
@@ -34,7 +34,6 @@ function emailController(){
          const user =await User.create({
              name,
              email,
-             role,
              password:hashedPassword
             
          })

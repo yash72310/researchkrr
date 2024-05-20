@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <title>Research Krr</title>
+  <script src="https://kit.fontawesome.com/84580da7a1.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="navbar" id="myNavbar">
+  <a href="#" class="active" style="color: black;">Research <span style="color: #524C42;">Krr</span></a>
+  <div class="aside">
+  <a href="/#all_food">Home</a>
+  <a href="/about">About Us</a>
+  <a href="/jobs">Contact Us</a>
+  <a href="/customer/orders">Order</a>
+  <% if(user) { %>
+        <form id="logout" action="/logout" method="POST">
+            <a onclick="document.getElementById('logout').submit()" href="#">Logout</a>
+        </form>
+    <% } else { %>
+   <a href="/register">Register</a>
+   <a href="/login">Login</a>
+    <% } %>
+    <a href="/cart" class="px-4 py-2 rounded-full flex items-center cart">
+      <span id="cartCounter"
+          class="text-white font-bold pr-2"><%= session.cart ? session.cart.totalQty : '' %></span>
+      <img src="/img/cart.png" alt="" class="cart_icon">
+  </a>
+</div>
+  <a href="#" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<%- body %>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/app.js"></script>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myNavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+
+</body>
+</html>

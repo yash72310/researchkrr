@@ -1,0 +1,70 @@
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Permanent+Marker&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Indie+Flower&family=Permanent+Marker&display=swap');
+ .size{
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-size: larger;
+  font-style:normal;
+  font-weight: bolder;
+ }
+ .price{
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+ }
+ .pizza_name{
+  font-family: "Indie Flower", cursive;
+  font-weight: 900;
+  font-style: normal;
+  font-size: larger;
+ }
+</style>
+
+<section   class="home">
+      <div class="main-content clearfix">
+        <div class="main-content-text">
+          <h2 style="font-size: larger;font-weight: 900; text-align: center;">HUM KYA KRTE HAIN??</h2>
+          <p style="color: #90D26D;text-align: center; font-weight: bolder;">Bacho ki Mushkilen Asaan</p>
+          <div style="display: flex;">
+          <div class="item_list">
+          <ul style="padding-top: 20px; list-style-type: circle; font-weight: 900;">
+            <li>Research Paper Making</li>
+            <li>Report Writing</li>
+            <li>Review Paper</li>
+            <li>PPT Making</li>
+          </ul>
+        </div>
+        <div style="border: 2px solid black;transform: rotate(-10deg); clip-path: polygon(5% 0%, 50% 0%, 120% 30%, 100% 70%, 70% 100%, 2% 100%, 0% 70%, 0% 30%);">
+          <h1 style="padding-top: 30px; font-weight: bolder;font-size: larger; color: red;">Special Deal</h1>
+          <p style=>Complete Package including all the items</p>
+          <p style=>At very Resonable Rates</p>
+
+        </div>
+      </div>
+        </div>
+      </div>
+</section>
+
+<h1 class="text-xl font-bold mb-8 px-10" id="all_food" style="text-align: center;margin-top: 30px;color: #90D26D;font-size: 2rem;font-family:Poppins", sans-serif;">Check Out The Items</h1>
+
+<div class="menu">
+    <% pizzas.forEach(function(pizza) { %>
+    <div class="menu-item">
+      <!-- <img src="/img/<%= pizza.image %>" alt="Burger"  loading="lazy"> -->
+      <h3 class="pizza_name"><%= pizza.name %></h3>
+      <span class="size" style="background-color: #E0F7FA;padding: 10px 10px 10px 10px ;"><%= pizza.completion_time%></span>
+      <p class="price">₹<%= pizza.price %></p>
+      <button data-pizza="<%= JSON.stringify(pizza) %>"
+        class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold btn-cart" style="background-color: #0d2c40;">
+        <span>+</span>
+        <span class="ml-4">Add</span>
+    </button>
+    </div>
+    <% }) %>
+</div>
+
+
+
+

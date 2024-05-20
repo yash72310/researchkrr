@@ -1,0 +1,36 @@
+[{
+    "name": "Content Writing",
+    "image": "conten.jpg",
+    "price": 1500,
+    "completion_time": "Completed in 2-3 days"
+  },
+  {
+    "name": "Report Writing",
+    "image": "report.jpg",
+    "price": 2000,
+    "completion_time": "Completed in 2-3 days"
+  },
+  {
+    "name": "PPT Making",
+    "image": "ppt.jpg",
+    "price": 500,
+    "completion_time": "Completed in 1-2 days"
+  },
+  {
+    "name": "Research paper Writing",
+    "image": "research.jpg",
+    "price": 2200,
+    "completion_time": "Completed in 2-3 days"
+  },
+  {
+    "name": "Review Paper Making",
+    "image": "review.jpg",
+    "price": 1500,
+    "completion_time": "Completed in 1-2 days"
+  },
+  {
+    "name": "Package of Report Writing , Research Paper , PPT Making",
+    "image": "conten.jpg",
+    "price": 4500,
+    "completion_time": "Completed in 3-4 days"
+  }]

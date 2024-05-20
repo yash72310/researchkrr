@@ -12,7 +12,7 @@ const MongoDbStore = require('connect-mongo')(session)
 const passport = require('passport')
 const Emitter = require('events')
 const research=require('./app/models/research')
-const researchjson=require('./research.json')
+
 
 
 
@@ -24,7 +24,7 @@ connection.once('open', () => {
 }).catch(err => {
     console.log('Connection failed...')
 });
-research.create(researchjson)
+
 
 
 

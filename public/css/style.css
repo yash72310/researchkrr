@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 .navbar {
-  background-color: #90D26D;
+  background-color:  hsl(218, 70%, 18%);
   overflow: hidden;
   color: aliceblue;
 }
@@ -60,6 +60,7 @@
   margin: 50px;
 }
 
+
 @media screen and (max-width: 800px) {
   .navbar a:not(:first-child) {display: none;}
   .navbar a.icon {
@@ -86,9 +87,6 @@
   position: relative;
   bottom: 5px;
 }
-.about_content{
-  margin: 5px;
-}
 }
 
 @media screen and (max-width: 800px) {
@@ -112,6 +110,8 @@
   float: left;
 }
 }
+
+
 
 
 

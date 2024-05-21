@@ -215,6 +215,7 @@
        }
        .about_content{
         margin: 5px;
+     overflow-x: hidden;
       }
      }
  
